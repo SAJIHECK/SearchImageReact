@@ -1,12 +1,19 @@
 import React from "react";
 
 class SearchBar extends React.Component{
-render(){
-    return (<div>
-        <form>
-            <input/>
-        </form>
 
+state={term:''};
+
+
+render(){
+    return (
+    <div className="ui segment">
+        <form className="ui form">
+            <div className="field"> 
+            <label>Image Serach</label>
+            <input type="text" onChange={e=>this.setState({term:e.target.value})}/>
+            </div>
+        </form>
     </div>);
 }
 }
